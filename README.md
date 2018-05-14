@@ -1,13 +1,25 @@
 # app-anjosderua
-```
-Aplicativo da Ong de resgate e adoção de animais 
-```
+
+>Aplicativo da Ong de resgate e adoção de animais 
+
 
 ## Principais Tecnologias utilizadas:
 
 Descrição | Versão
 --------- | ------:
-[React-Native](https://facebook.github.io/react-native/) | ""
+[React-Native](https://facebook.github.io/react-native/) | "0.55.2"
+
+## Instalação
+
+* Ao Clonar abrir o terminal de comando na pasta onde está e executar o seguinte comando `yarn importante` ou `npm run importante`
+* Ao terminar abrir `android/app/src/main/AndroidManifest.xml` no editor de sua preferencia e abaixo do código '`<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>`' adicionar o código que está logo abaixo, salve e feche
+    ```xml
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.CAMERA" />
+    ```
+* Então execute no terminal de comando o seguinte comando com o celular conectado ou emulador ligado `npm run android` ou `yarn android`
+* Pode abrir o editor e editar o codigo.
+    * Apos executar o último comando, quando necessitar editar o código e verificar, basta executar `npm start` ou `yarn start` com o emulador ligado ou celular conectado.
 
 ## Links Importantes
 

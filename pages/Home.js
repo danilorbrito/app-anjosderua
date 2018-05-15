@@ -18,8 +18,8 @@ export default class Home extends Component<{}> {
     constructor(props) {
         super(props)
         this.state = {
-            login: '',
-            senha: '',
+            login: 'luciano@verdureiro.com',
+            senha: '5550123',
             mostraSenha: false,
             logando: false
         }
@@ -62,10 +62,8 @@ export default class Home extends Component<{}> {
                     <Btn style={styles.loginBtn} text='Entrar'
                         onPress={() =>{
                             this.setState({logando: !this.state.logando})
-                            setTimeout(()=>{
-                                alert('logado')
-                                this.setState({logando: false, login: '', senha: '', mostraSenha: false})
-                            }, 3000)
+                            let url = 'http://10.0.2.2:80/anjos_server/authentication'
+                            this.setState({logando: false, login: '', senha: '', mostraSenha: false})
                         }}
                     />
                     <Btn style={{backgroundColor: "#ffee33", marginBottom: 10}} text='Limpar Campos'
